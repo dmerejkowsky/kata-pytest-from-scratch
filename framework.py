@@ -62,9 +62,10 @@ def main():
     outcomes = []
     for test in tests:
         outcome = run(test)
-        if outcome.test_status != TestStatus.success:
-            print(test.name)
-            print(type(outcome.exception))
+        if outcome.test_status == TestStatus.success:
+            print(test.name, "OK")
+        else:
+            print("Error:", test.name, "threw", outcome.exception.__class__.__name__)
         outcomes.append(outcome)
     summary = summarize(outcomes)
     print(f"Ran {summary.total} tests")
@@ -72,7 +73,7 @@ def main():
         print(f"FAILED (errors={summary.errors})")
         sys.exit(1)
     else:
-        print("Ok")
+        print("SUCCESS")
 
 
 if __name__ == "__main__":
