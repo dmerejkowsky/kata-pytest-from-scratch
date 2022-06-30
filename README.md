@@ -1,7 +1,7 @@
-# Testception
+# pytest from scratch
 
 Goal of the kata: discover Python's way of doing things by re-implementing
-pytest in Python using TDD and the `unittest` module - which should be
+a subset of pytest's functionnality using TDD and the `unittest` module - which should be
 more familiar for devs coming from other languages.
 
 ## Instructions
@@ -46,3 +46,15 @@ class RunTestCase(unittest.TestCase):
         self.assertTrue(success)
 ```
 
+## Useful modules from the standard library
+
+You probably won't need any third-party library to implement the framework.
+
+But there are two modules from the standard library that should prove useful:
+
+* [inspect](https://docs.python.org/3/library/inspect.html)
+* [importlib](https://docs.python.org/3/library/importlib.html)
+
+## Solution (spoiler!)
+
+You can see one possible solution in the 
