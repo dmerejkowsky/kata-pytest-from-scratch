@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pytest-from-scratch"
+version = "0.1.0"
+description = ""
+authors = ["Dimitri Merejkowsky <dimitri@dmerej.info>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
